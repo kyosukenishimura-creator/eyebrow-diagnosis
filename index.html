@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>似合う眉の形診断 | B&lt;AFTER SALON</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ========== トップページ ========== -->
+  <div id="screen-top" class="screen active">
+    <header class="header">
+      <div class="logo">B&lt;AFTER<span class="logo-sub">SALON</span></div>
+    </header>
+    <div class="top-content">
+      <div class="top-eyecatch">
+        <div class="gold-line"></div>
+        <h1 class="top-title">似合う眉の形診断</h1>
+        <p class="top-subtitle">EYEBROW SHAPE DIAGNOSIS</p>
+        <div class="gold-line"></div>
+      </div>
+      <p class="top-description">
+        あなたの顔立ち・印象・なりたい雰囲気から、<br>
+        一番似合う眉の形をご提案します。
+      </p>
+      <p class="top-note">全12問 / 所要時間 約2分</p>
+      <button class="btn-primary" onclick="startDiagnosis()">診断をはじめる</button>
+    </div>
+    <footer class="footer">
+      <p>&copy; B&lt;AFTER SALON</p>
+    </footer>
+  </div>
+
+  <!-- ========== 質問画面 ========== -->
+  <div id="screen-question" class="screen">
+    <header class="header">
+      <div class="logo-small">B&lt;AFTER<span class="logo-sub">SALON</span></div>
+    </header>
+    <div class="question-content">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="question-number" id="questionNumber">QUESTION 1/12</p>
+      <h2 class="question-text" id="questionText"></h2>
+      <div class="options" id="optionsContainer"></div>
+      <div class="question-nav">
+        <button class="btn-back" id="btnBack" onclick="prevQuestion()">前の質問に戻る</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 結果画面 ========== -->
+  <div id="screen-result" class="screen">
+    <header class="header">
+      <div class="logo-small">B&lt;AFTER<span class="logo-sub">SALON</span></div>
+    </header>
+    <div class="result-content">
+      <p class="result-label">DIAGNOSIS RESULT</p>
+      <div class="result-card">
+        <div class="result-icon" id="resultIcon"></div>
+        <h2 class="result-type" id="resultType"></h2>
+        <span class="result-badge" id="resultBadge"></span>
+        <p class="result-description" id="resultDescription"></p>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-title"><span class="gold-accent">|</span> あなたの眉の特徴</h3>
+        <ul class="feature-list" id="featureList"></ul>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-title"><span class="gold-accent">|</span> 似合わせポイント</h3>
+        <div class="care-list" id="careList"></div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-title"><span class="gold-accent">|</span> 来店前チェック</h3>
+        <ul class="checklist" id="checklist"></ul>
+      </div>
+
+      <div class="result-cta">
+        <p class="cta-text">あなたに合った眉デザインをご提案します</p>
+        <a href="https://b-after.co.jp/" class="btn-primary" target="_blank">WEB予約はこちら</a>
+        <button class="btn-secondary" onclick="resetDiagnosis()">もう一度診断する</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; B&lt;AFTER SALON</p>
+    </footer>
+  </div>
+
+  <script src="diagnosis.js"></script>
+</body>
+</html>
