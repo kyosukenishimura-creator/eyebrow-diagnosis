@@ -3,10 +3,10 @@ const questions = [
   {
     text: "あなたの顔の形に一番近いのは？",
     options: [
-      { label: "丸顔（ふっくら・横幅がある）", scores: { arch: 2, up: 1 } },
-      { label: "卵型（バランスがいい）", scores: { arch: 1, parallel: 1 } },
-      { label: "面長（縦に長め）", scores: { parallel: 2, thick: 1 } },
-      { label: "ベース型・四角顔（エラが気になる）", scores: { arch: 2, down: 1 } }
+      { label: "丸顔", scores: { arch: 2, up: 1 } },
+      { label: "卵型", scores: { arch: 1, parallel: 1 } },
+      { label: "面長", scores: { parallel: 2, thick: 1 } },
+      { label: "ベース型・四角顔", scores: { arch: 2, down: 1 } }
     ]
   },
   {
@@ -51,7 +51,7 @@ const questions = [
       { label: "巻き髪・フェミニンロング", scores: { arch: 2 } },
       { label: "ストレートロング・大人ヘア", scores: { straight: 1, parallel: 1 } },
       { label: "ショート・ボブ", scores: { up: 2, thick: 1 } },
-      { label: "ナチュラルウェーブ・抜け感ヘア", scores: { thick: 2 } }
+      { label: "レイヤー・抜け感ヘア", scores: { thick: 2 } }
     ]
   },
   {
@@ -75,10 +75,10 @@ const questions = [
   {
     text: "眉メイクで一番悩むのは？",
     options: [
-      { label: "きつい・怒ってる風に見える", scores: { down: 2, parallel: 1 } },
-      { label: "優しすぎて顔がぼやける", scores: { up: 2, straight: 1 } },
+      { label: "左右が対称じゃない", scores: { arch: 1 } },
+      { label: "どんな形がいいか分からない", scores: { arch: 2, parallel: 1 } },
       { label: "顔とのバランスが難しい", scores: { arch: 2 } },
-      { label: "地味でメリハリがない", scores: { thick: 1, arch: 1, straight: 1 } }
+      { label: "眉だけ濃くなってしまう", scores: { down: 1, parallel: 1, thick: 1 } }
     ]
   },
   {
@@ -125,11 +125,11 @@ const resultTypes = {
     ],
     cares: [
       { icon: "🌙", title: "ゆるやかなアーチを意識", text: "眉山を黒目外側〜眉尻の間に置き、自然なカーブを描く" },
-      { icon: "✏️", title: "太さは中間でバランス良く", text: "細すぎず太すぎず、上品な太さをキープしましょう" },
+      { icon: "✏️", title: "太さは中間でバランス良く", text: "黒目の縦幅の3分の2の太さで、自然にキープしましょう。" },
       { icon: "💄", title: "ブラウン系で柔らかく仕上げ", text: "グレージュやアッシュブラウンで肌になじませて" }
     ],
     checks: [
-      "眉山が眉頭から黒目外側〜眉尻の間にありますか？",
+      "眉山が黒目の外側よりも目頭側にありますか？",
       "眉尻が眉頭よりやや高めの位置にありますか？",
       "全体的に丸みのあるカーブが描けていますか？"
     ]
